@@ -1,0 +1,17 @@
+{
+  "name": "mesh-utils",
+  "version": "1.2.0",
+  "description": "A utitlity library package. It contains general purpose functions, that can be used in and within projects.",
+  "main": "utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utility",
+    "util",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "pavittarx",
+  "license": "MIT"
+}
