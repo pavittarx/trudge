@@ -6,14 +6,8 @@ module.exports = {
     file: file
 }
 
+const json = require('./modules/json');
 
+async function init(){
 
-async function init() {
-
-    file.write('This is some sample data', './test/test.md');
-    let listFiles = await file.list('./test');
-    for (let i in listFiles)
-       console.log(await file.read('./test/'+listFiles[i]));
 }
-
-init();
