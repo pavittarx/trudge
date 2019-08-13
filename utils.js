@@ -9,7 +9,8 @@ module.exports = {
     json
 }
 
-async function init(){
+async function init() {
+    
 }
 
 init();
