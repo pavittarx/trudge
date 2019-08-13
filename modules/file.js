@@ -36,6 +36,10 @@ function writeFile(data, location) {
             stream.end();
             resolve({ err :  true, error})
         });
+
+        stream.on('end', ()=>{
+            resolve(true);
+        })
     })
 }
 
