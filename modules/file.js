@@ -28,10 +28,11 @@ function readFile(uri) {
 
 // writes data at given location
 function writeFile(data, location) {
-    let stream = fs.createWriteStream(location);
+    let stream = fs.createWriteStream(location, {autoClose: true});
     stream.write(data);
 
-    return Promise((resolve, reject) => {
+
+    return new Promise((resolve, reject) => {
         stream.on('error', (error) => {
             stream.end();
             resolve({
@@ -39,10 +40,6 @@ function writeFile(data, location) {
                 error
             })
         });
-
-        stream.on('finish', () => {
-            resolve(true);
-        })
     })
 }
 
