@@ -31,7 +31,7 @@ function writeFile(data, location) {
     let stream = fs.createWriteStream(location);
     stream.write(data);
 
-    return Promise((res, rej) => {
+    return Promise((resolve, reject) => {
         stream.on('error', (error) => {
             stream.end();
             resolve({
@@ -40,7 +40,7 @@ function writeFile(data, location) {
             })
         });
 
-        stream.on('end', () => {
+        stream.on('finish', () => {
             resolve(true);
         })
     })
