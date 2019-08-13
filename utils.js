@@ -10,5 +10,6 @@ module.exports = {
 }
 
 async function init(){
-    
 }
+
+init();

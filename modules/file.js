@@ -28,19 +28,18 @@ function readFile(uri) {
 
 // writes data at given location
 function writeFile(data, location) {
-    let stream = fs.createWriteStream(location, {autoClose: true});
+    let stream = fs.createWriteStream(location, {
+        autoClose: true
+    });
     stream.write(data);
-
-
-    return new Promise((resolve, reject) => {
-        stream.on('error', (error) => {
-            stream.end();
+    stream.on('error', (error) => {
+        return new Promise( resolve =>{
             resolve({
                 err: true,
                 error
-            })
-        });
-    })
+            });
+        })       
+    });
 }
 
 // lists files in a given directory
