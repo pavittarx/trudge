@@ -30,14 +30,17 @@ function readFile(uri) {
 function writeFile(data, location) {
     let stream = fs.createWriteStream(location);
     stream.write(data);
-    
-    return Promise((res, rej)=>{
-        stream.on('error', (error)=>{
+
+    return Promise((res, rej) => {
+        stream.on('error', (error) => {
             stream.end();
-            resolve({ err :  true, error})
+            resolve({
+                err: true,
+                error
+            })
         });
 
-        stream.on('end', ()=>{
+        stream.on('end', () => {
             resolve(true);
         })
     })
