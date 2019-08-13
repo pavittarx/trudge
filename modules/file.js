@@ -30,6 +30,13 @@ function readFile(uri) {
 function writeFile(data, location) {
     let stream = fs.createWriteStream(location);
     stream.write(data);
+    
+    return Promise((res, rej)=>{
+        stream.on('error', (error)=>{
+            stream.end();
+            resolve({ err :  true, error})
+        });
+    })
 }
 
 // lists files in a given directory

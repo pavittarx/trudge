@@ -1,13 +1,13 @@
 const clock = require('./modules/clock');
 const file = require('./modules/file');
-
-module.exports = {
-    clock: clock,
-    file: file
-}
-
 const json = require('./modules/json');
 
+
+module.exports = {
+    clock,
+    file,
+    json
+}
 async function init(){
 
 }
