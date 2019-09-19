@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # trudge
 A general purpose javascript utility library, that can be used in and within projects.
 
