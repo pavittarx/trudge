@@ -20,8 +20,6 @@ console.log(contents);
 
 Developed by [pavittarx](https://github.com/pavittarx)
 
-[View Docs](https://pavittarx.github.io/trudge)
-
-[Goto Project Source](https://github.com/pavittarx/trudge) 
+[View Docs](https://pavittarx.github.io/trudge){: .btn .btn-green .mr-2}   [Goto Project Source](https://github.com/pavittarx/trudge) {: .btn .btn-purple .mr-4}
 
 If you like this, please consider giving this project a star on Github. 
