@@ -10,9 +10,9 @@ A general purpose javascript utility library, that can be used in and within pro
 
 ## Modules 
 
-* [File Module](/docs/file.md)
-* [JSON Module](/docs/json.md)
-* [Clock Module](/docs/clock.md)
+* [File Module](/file)
+* [JSON Module](/json)
+* [Clock Module](/clock)
 
 by [pavittarx](https://github.com/pavittarx)
 
