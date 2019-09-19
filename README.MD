@@ -12,4 +12,4 @@ A general purpose javascript utility library, that can be used in and within pro
 
 by [pavittarx](https://github.com/pavittarx)
 
-[Project Source](https://github.com/pavittarx/trudge) | [View Docs](https://github.com/pavittarx/trudge/tree/docs) | [Contribution Docs](/docs/contribution.md)
+[Project Source](https://github.com/pavittarx/trudge) | [View Docs](https://pavittarx.github.io/trudge)
