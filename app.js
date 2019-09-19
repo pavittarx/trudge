@@ -1,4 +1,5 @@
 module.exports = {
     file : require('./file'), 
-    json : require('./json')
+    json : require('./json'),
+    clock : require('./clock')
 }
