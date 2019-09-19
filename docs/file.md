@@ -1,7 +1,3 @@
-## trudge
-
-[Project Source](https://github.com/pavittarx/trudge) | [View Docs](https://github.com/pavittarx/trudge/tree/docs)
-
 ## File Moldule 
 This module helps you read, write & list files in a directory. 
 
@@ -9,11 +5,11 @@ This module helps you read, write & list files in a directory.
 const file = require('mesh-utils').file;
 ```
 
-> file.read(url)
+### file.read(url)
 
 It reads a file, and returns a promise. The promise resolves into file contents, or an error object.
 
-> file.list(dir_url) 
+### file.list(dir_url) 
 
 It lists the contents of a directory. 
 
@@ -21,7 +17,7 @@ Return Type: Promise
 
 Resolves Into: Array containing contents of directory, or error object. 
 
-> file.write(data, location)
+### file.write(data, location)
 
 It writes provided data at the given location. 
 * The location parameter must also contain filename. 
@@ -35,3 +31,11 @@ It writes provided data at the given location.
   for (let i in listFiles)
     console.log(await file.read('./test/'+listFiles[i]));
 ```
+
+--- 
+
+If you like it, please consider giving this project a star on Github.
+
+[View Source](https://github.com/pavittarx/trudge)  
+
+Developed by [pavittarx](https://github.com/pavittarx)

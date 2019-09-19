@@ -1,11 +1,7 @@
-## trudge
-
-[Project Source](https://github.com/pavittarx/trudge) | [View Docs](https://github.com/pavittarx/trudge/tree/docs)
-
 ## Clock Module
 It structurizes date and time, to provide easy workflow when working with date & time.
 
-> clock.genStamp(dateString)
+### clock.genStamp(dateString)
 
 It generates a timestamp from given date string.  
 ```js
@@ -14,7 +10,7 @@ let stamp = clock.genStamp('01 January 2019, 22:33:44');
 console.log(stamp);
 ```
 
-> clock.genClock(jsTimestamp)
+### clock.genClock(jsTimestamp)
 It generates a date & time data structure from given timestamp. 
 
 ```js
@@ -36,15 +32,15 @@ Result
      string: [Function: string] } } 
 ```
 
-> clock.MonthText(clockData.date.month)
+### clock.MonthText(clockData.date.month)
 
 It returns name of the month instead of a number. (January,  February)
 
-> clock.weekDay(clockData.date.weekDay)
+### clock.weekDay(clockData.date.weekDay)
 
 It returns name of the week day instead of a number. (Sunday, Monday) 
 
-> clock.abbv()
+### clock.abbv()
 
 It abbreviates a textual day or month. 
 
@@ -54,3 +50,9 @@ console.log(clock.abbv(weekDay));
 ```
 
 ---- 
+
+If you like it, please consider giving this project a star on Github.
+
+[View Source](https://github.com/pavittarx/trudge)  
+
+Developed by [pavittarx](https://github.com/pavittarx)

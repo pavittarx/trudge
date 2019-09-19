@@ -6,14 +6,22 @@ permalink: /index.html
 A general purpose javascript utility library, that can be used in and within projects.
 
 ## Install
+
 > npm install trudge
 
-## Modules 
+## Usage 
 
-* [File Module](/file)
-* [JSON Module](/json)
-* [Clock Module](/clock)
+```
+const _fs = require('trudge').file;
+let contents = _fs.read('./test.md');
+console.log(contents);
 
-by [pavittarx](https://github.com/pavittarx)
+```
 
-[Project Source](https://github.com/pavittarx/trudge) | [View Docs](https://pavittarx.github.io/trudge)
+Developed by [pavittarx](https://github.com/pavittarx)
+
+[View Docs](https://pavittarx.github.io/trudge)
+
+[Goto Project Source](https://github.com/pavittarx/trudge) 
+
+If you like this, please consider giving this project a star on Github. 
