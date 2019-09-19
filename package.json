@@ -1,17 +1,22 @@
 {
-  "name": "mesh-utils",
-  "version": "1.4.0",
-  "description": "A utitlity library package. It contains general purpose functions, that can be used in and within projects.",
-  "main": "utils.js",
+  "name": "mesh-data",
+  "version": "1.0.0",
+  "description": "A data handling package for meshfier",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n/a.git"
   },
   "keywords": [
-    "utility",
-    "util",
-    "javascript",
-    "nodejs"
+    "meshfier"
   ],
   "author": "pavittarx",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n/a/issues"
+  },
+  "homepage": "https://github.com/n/a#readme"
 }

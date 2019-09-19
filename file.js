@@ -115,16 +115,33 @@ async function getStats(uri) {
 }
 
 // returns true when file has finished writing or modifying
-async function isFinishedModifying(uri) {
-    let size = await getStats(uri).size;
-    return new Promise((resolve) => {
-        setInterval(async function () {
-            let newSize = await getStats(uri).size;
-            if (size === await getStats(uri).size) {
-                resolve((true));
-                clearInterval(this);
-            } else size = newSize;
-
-        }, 500)
+async function isFinishedModifying(fileUri) {
+    return new Promise((resolve, reject) => {
+        let interval = setInterval(() => {
+            fs.open(fileUri, 'r+', (err, fd) => {
+                if (err && err.code === 'EBUSY') {
+                    // just wait for next iteration
+                } else if (err && err.code === 'ENOENT') {
+                    resolve({
+                        err: true,
+                        error: 'file.js : 127 -> File does Not Exist'
+                    });
+                    clearInterval(interval);
+                } else {
+                    fs.close(fd, (err) => {
+                        if (err){
+                            resolve({
+                                err: true,
+                                error: err
+                            })
+                            clearInterval(interval);
+                        } else{
+                            resolve(true);
+                            clearInterval(interval);
+                        }
+                    })
+                }
+            });
+        }, 500);
     })
 }
