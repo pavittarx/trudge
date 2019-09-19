@@ -6,4 +6,4 @@ A general purpose javascript utility library, that can be used in and within pro
 
 <br/>
 
-[View Docs](pavittarx.github.com/trudge) 
+[View Docs](https://pavittarx.github.com/trudge) 
