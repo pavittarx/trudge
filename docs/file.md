@@ -2,37 +2,39 @@
 This module helps you read, write & list files in a directory. 
 
 ```js
-const file = require('mesh-utils').file;
+const _fs = require('trudge').file;
 ```
 
-### file.read(url)
+### _fs.read(local_url)
 
-It reads a file, and returns a promise. The promise resolves into file contents, or an error object.
+It reads a file from the file system. 
+* Return Type: Promise, resolves with file contents.
+* Function Type: Asynchronous
 
-### file.list(dir_url) 
-
-It lists the contents of a directory. 
-
-Return Type: Promise 
-
-Resolves Into: Array containing contents of directory, or error object. 
-
-### file.write(data, location)
-
-It writes provided data at the given location. 
-* The location parameter must also contain filename. 
-* A new file is created or existing file is rewritten. 
+```js 
+async function read(){
+  let data = await _fs.read('./test.md');
+  console.log(data);
+}
+```
+### _fs.write(data, location) 
+It writes data at any given location in the filesystem. 
+* Return Type: None
 
 ```js
-  file.write('This is some sample data', './test/test.md');
-
-  let listFiles = await file.list('./test');
-    
-  for (let i in listFiles)
-    console.log(await file.read('./test/'+listFiles[i]));
+ _fs.write("Some Sample Text", "./test.md");
 ```
+*Use _fs.isFinishedWiriting() to check if the file is being used by another process.*
 
---- 
+### _fs.list(directory_url) 
+It lists the contents of a directory. 
+* Return Type: Promise, resolves into contents of the directory. 
+
+```js
+  _fs.list('./'); 
+```
+*The functions does not differentiate between file & directories. Use _fs.getStats() to get the file/directory information.*
+
 
 If you like it, please consider giving this project a star on Github.
 
